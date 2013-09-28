@@ -2,6 +2,21 @@
 requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
     function (ext, $, TableComponent) {
 
+        Raphael.fn.hexagon = function(x0, y0, radius) {
+            var path = "";
+            for (var i = 0; i <= 6; i++) {
+                var a = i * 60;
+                var x = radius * Math.cos(a * Math.PI / 180);
+                var y = radius * Math.sin(a * Math.PI / 180);
+                path += (i == 0 ? "M" : "L") + (x + x0) + "," + (y + y0);
+            }
+            path += "Z";
+            var hex = this.path(path);
+            hex.cx = x0;
+            hex.cy = y0;
+            return hex;
+        };
+
         var cur_slide = {};
 
         ext.set_start_game(function (this_e) {
@@ -136,20 +151,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
         var colorWhite = "#FFFFFF";
 
-        Raphael.fn.hexagon = function(x0, y0, radius) {
-            var path = "";
-            for (var i = 0; i <= 6; i++) {
-                var a = i * 60;
-                var x = radius * Math.cos(a * Math.PI / 180);
-                var y = radius * Math.sin(a * Math.PI / 180);
-                path += (i == 0 ? "M" : "L") + (x + x0) + "," + (y + y0);
-            }
-            path += "Z";
-            var hex = this.path(path);
-            hex.cx = x0;
-            hex.cy = y0;
-            return hex;
-        };
+
 
         function HexagonSpiralCanvas(dataInput, expl, size) {
             var zx = 10;
