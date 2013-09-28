@@ -1,11 +1,17 @@
-def checkio(a, b):
+def checkio(data):
+    """list[int, int] -> int
+    Find the destination
     """
-        sums two passed arguments
-    """
-    return None
+    a, b = data
+    
+    #replace this for solution
+    return 0
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
-    assert checkio(3, 2) == 5
-    assert checkio(5, 7) == 12
-    print('Done')
+    assert checkio([2, 9]) == 1, "First"
+    assert checkio([9, 2]) == 1, "Reverse First"
+    assert checkio([6, 19]) == 2, "Second, short way"
+    assert checkio([5, 11]) == 3, "Third"
+    assert checkio([13, 15]) == 2, "Fourth, One row"
+    assert checkio([11, 17]) == 4, "Fifth, One more test"
