@@ -23,7 +23,7 @@ TESTS = {
         {"input": [84, 78], "answer": 6, "explanation": 15},
         {"input": [92, 62], "answer": 1, "explanation": 0},
         {"input": [100, 1], "answer": 6, "explanation": 0},
-        {"input": [1000, 1002], "answer": 2, "explanation": 0}
+        {"input": [500, 502], "answer": 2, "explanation": 0}
     ],
     "Extra": [
         {"input": [2, 8], "answer": 1, "explanation": 0},
@@ -38,6 +38,6 @@ TESTS = {
         {"input": [84, 68], "answer": 10, "explanation": 37},
         {"input": [92, 32], "answer": 8, "explanation": 0},
         {"input": [101, 1], "answer": 6, "explanation": 0},
-        {"input": [2000, 2002], "answer": 2, "explanation": 0}
+        {"input": [600, 602], "answer": 2, "explanation": 0}
     ]
 }
