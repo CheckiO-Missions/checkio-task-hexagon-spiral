@@ -179,5 +179,6 @@ fieldset[disabled] .btn {
     background-color: #eeeeee;
 }
 
-/* Your CSS */
-/*          */
+.tryit-content text {
+    cursor: default;
+}
