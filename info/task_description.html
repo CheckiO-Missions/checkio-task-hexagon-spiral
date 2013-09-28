@@ -1,39 +1,42 @@
-<p>
-    <i>( Describe task in general )</i>
-</p>
+<div class="story">
+    <p>Satisfied with his experiment, Nikola sets down <a href="/mission/task/info/destination-in-spiral/">the strange
+        circuit</a> and finds an even stranger circuit beside it on the shelf. This one appears to be made of a
+        collection of hexagons. Nikola decides to run the same experiment as before with this circuit as well.</p>
+</div>
 
-<p>
-    Sum two passed ints
-</p>
+<p>The map of the circuit consists of a collection of hexagonal elements. The first element in the center is
+    marked as 1 and in a continuing clockwise spiral, the rest of the elements are marked in ascending order
+    <a href="http://en.wikipedia.org/wiki/Ad_infinitum" title="to infinity">ad infinitum</a>. On the map, you can move
+    (connect) through the adjoining edges of the hexagonal elements. </p>
+
+<p>For example: the distance between elements 6 and 19 is two moves and the distance between 2 and 9 is one move. You
+    must help Nikola find the distance between any two elements on the map.</p>
 
 <p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <img class="for_info_only" title="hex-spiral" src="{{MEDIA}}hex-spiral.png" alt="hex-spiral"/>
+    <img class="for_editor_only" title="hex-spiral" src="{{MEDIA}}hex-spiral.png" alt="hex-spiral" width="380px"/>
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Input: </strong>  The pair of numbers that represent the 2 elements.
 </p>
 
+<p>
+    <strong>Output: </strong> The distance between the 2 elements (integer).
+</p>
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
-    <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
-    </pre>
+    <pre class="brush: python">checkio([2, 9]) == 1
+checkio([9, 2]) == 1
+checkio([6, 19]) == 2
+checkio([5, 11]) == 3</pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    In some games hexagons are used for map. This task will learn you how to work with this.
 </p>
