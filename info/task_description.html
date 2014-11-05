@@ -1,28 +1,39 @@
 <div class="story">
-    <p>Satisfied with his experiment, Nikola sets down the <a href="http://www.checkio.org/mission/task/share/destination-in-spiral/f9f73dc7c68b827cb7a0db13c38318a8/">strange
-        circuit</a> and finds another circuit board on the shelf. This one appears to be made of a
-        series of hexagons. Nikola decides to run a series of experiments on this circuit board.</p>
 </div>
 
-<p>The map of the circuit consists of a collection of hexagonal elements. The first element in the center is
-    marked as 1 and in a continuing clockwise spiral, the rest of the elements are marked in ascending order
-    <a href="http://en.wikipedia.org/wiki/Ad_infinitum" title="to infinity">ad infinitum</a>. On the map of the circuit, you can move
-    (connect) through the adjoining edges of the hexagonal elements. </p>
+<p>
+    Bees are very organized insects. Let's suppose that bees have numerical order for honeycombs.
+    Each cell in the honeycomb is <a href="http://en.wikipedia.org/wiki/Hexagon">hexagon</a>.
+    And if they want to build accurate honeycomb then one of the way is build it by spiral.
+    And the numerical order will be by this spiral. That way each cell has own number and
+    we have navigation system on the honeycomb. Now we should learn how to define distance.
+</p>
+<p>
+    The map of the honeycomb consists of a collection of hexagonal elements.
+    The first element in the center is marked as 1 and in a continuing clockwise spiral,
+    the rest of the elements are marked in ascending order
+    <a href="http://en.wikipedia.org/wiki/Ad_infinitum" title="to infinity">ad infinitum</a>.
+    On the map of the circuit, you can "move" (connect) through the adjoining edges of the hexagonal
+    elements.
+</p>
 
-<p>For example: the distance between elements 6 and 19 is two moves and the distance between 2 and 9 is one move. You
-    must help Nikola find the distance between any two elements on the map.</p>
 
 <p style="text-align: center;">
-    <img class="for_info_only" title="hex-spiral" src="{{MEDIA}}hex-spiral.png" alt="hex-spiral"/>
-    <img class="for_editor_only" title="hex-spiral" src="{{MEDIA}}hex-spiral.png" alt="hex-spiral" width="380px"/>
+    <img title="hex-spiral" src="{{MEDIA}}hex-spiral.svg" alt="hex-spiral"/>
 </p>
 
 <p>
-    <strong>Input: </strong>  The pair of numbers that represent the 2 elements.
+    For example: the distance between elements 1 and 9 is two moves and the distance between 8 and
+    18 is two move.
+    Between 17 and 13 - 4 moves.
 </p>
 
 <p>
-    <strong>Output: </strong> The distance between the 2 elements (integer).
+    <strong>Input: </strong> Pair of numbers that represent 2 elements as integers.
+</p>
+
+<p>
+    <strong>Output: </strong> The distance between the 2 elements as an integer.
 </p>
 
 
@@ -30,13 +41,18 @@
     <p>
         <strong>Example:</strong>
     </p>
-    <pre class="brush: python">checkio([2, 9]) == 1
-checkio([9, 2]) == 1
-checkio([6, 19]) == 2
-checkio([5, 11]) == 3</pre>
+    <textarea> data-code="python>checkio([2, 9]) == 1
+hex_spiral(9, 2) == 1
+hex_spiral(6, 19) == 2
+hex_spiral(5, 11) == 3</textarea>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
     In some games hexagons are used for map. This task will learn you how to work with this.
 </p>
+
+<p>
+    <strong>Precondition:</strong><br>
+    all(0 &lt; x lt; ? for x in args)
+    </p>
