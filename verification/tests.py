@@ -39,6 +39,7 @@ TESTS = {
         {"input": [92, 32], "answer": 8, "explanation": 0},
         {"input": [101, 1], "answer": 6, "explanation": 0},
         {"input": [300, 302], "answer": 2, "explanation": 0},
+        {"input": [999, 998], "answer": 1, "explanation": 0},
         {"input": [84, 68], "answer": 10, "explanation": 37}
     ]
 }
