@@ -2,19 +2,22 @@
 </div>
 
 <p>
-    Bees are very organized insects. Let's suppose that bees have numerical order for honeycombs.
-    Each cell in the honeycomb is <a href="http://en.wikipedia.org/wiki/Hexagon">hexagon</a>.
-    And if they want to build accurate honeycomb then one of the way is build it by spiral.
-    And the numerical order will be by this spiral. That way each cell has own number and
-    we have navigation system on the honeycomb. Now we should learn how to define distance.
+    Bees are very well organized insects. Let's suppose that bees have numerical ordering system for
+    their honeycomb. If each cell in the honeycomb is
+    <a href="http://en.wikipedia.org/wiki/Hexagon">hexagon</a>
+    and the bees want to build an accurate
+    honeycomb then one method the could use to build it is to build in a spiraling pattern. This
+    would mean that the numerical order is also in a spiral. That way each cell has own number and
+    we have navigation system on the honeycomb. For this mission, we will need to account for that
+    information while we define the distance between specific cells.
+
 </p>
 <p>
-    The map of the honeycomb consists of a collection of hexagonal elements.
-    The first element in the center is marked as 1 and in a continuing clockwise spiral,
-    the rest of the elements are marked in ascending order
-    <a href="http://en.wikipedia.org/wiki/Ad_infinitum" title="to infinity">ad infinitum</a>.
-    On the map of the circuit, you can "move" (connect) through the adjoining edges of the hexagonal
-    elements.
+    The map of the honeycomb consists of a collection of hexagonal elements. The first element in
+    the center is marked as 1 and in a continuing clockwise spiral, the rest of the elements are
+    marked in ascending order ad infinitum. On this map, you can "move" through the adjoining edges
+    of the hexagonal elements to place yourself in a neighboring cell.
+
 </p>
 
 
@@ -42,17 +45,22 @@
         <strong>Example:</strong>
     </p>
     <textarea data-code="python">hex_spiral(2, 9) == 1
-hex_spiral(9, 2) == 1
-hex_spiral(6, 19) == 2
-hex_spiral(5, 11) == 3</textarea>
+        hex_spiral(9, 2) == 1
+        hex_spiral(6, 19) == 2
+        hex_spiral(5, 11) == 3</textarea>
 </div>
 <br>
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    In some games hexagons are used for map. This task will learn you how to work with this.
+    Often times, turn based strategy games or role playing games will use a hex grid based map for
+    unit placement allowing for six possible movement directions. This mission will help you to
+    write a simple program which can tell a unit the distance between specific cells. Add a few
+    restrictions for minimum and maximum distance and you could program not only movement range, but
+    also range of attack, area of effect or even range of influence.
+
 </p>
 
 <p>
     <strong>Precondition:</strong><br>
     all(0 &lt; x &lt; 1000 for x in args)
-    </p>
+</p>
